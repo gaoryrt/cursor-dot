@@ -18,8 +18,8 @@ $ yarn add cursor-dot
 ```js
 import curDot from 'cursor-dot'
 ```
-
-![](./customhoverstyles.gif)
+---
+![](./smoothcursorfollowing.gif)
 ```js
 const cursor = curDot()
 // 也可以自定义：
@@ -31,7 +31,7 @@ const cursor = curDot()
 //   background: '#fff'
 // })
 ```
-
+---
 ![](./customhoverstyles.gif)
 ```js
 cursor.over('span.selector', {
