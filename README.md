@@ -14,7 +14,6 @@ $ yarn add cursor-dot
 
 ## Usage 🍹
 
-### Import
 ```js
 import curDot from 'cursor-dot'
 ```
@@ -44,3 +43,5 @@ cursor.over($('El'), {
   background: '#fff'
 })
 ```
+
+## [Give it a try](https://codesandbox.io/s/focused-ellis-g9mpm)
