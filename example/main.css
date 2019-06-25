@@ -1,0 +1,55 @@
+html {
+  width: 100%;
+  overflow-x: hidden;
+  font-family: AvenirNext, Avenir, -apple-system, BlinkMacSystemFont, "PingFang SC","Helvetica Neue",STHeiti,"Microsoft Yahei",Tahoma,Simsun,sans-serif;
+  font-weight: normal;
+  font-style: normal;
+  font-stretch: normal;
+  user-select: none;
+  -webkit-font-smoothing: antialiased;
+  vertical-align: baseline;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-tap-highlight-color: transparent;
+  text-rendering: optimizeLegibility;
+  text-size-adjust: 100%;
+  color: #ddd;
+  line-height: 1.7;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  margin-left: calc(50% - 400px);
+  width: 800px;
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background: #282828;
+}
+
+.title {
+  margin: 200px 0;
+  line-height: 1;
+  font-size: 128px;
+  font-weight: 900;
+}
+
+.subtitle {
+  margin: 100px 0;
+  font-size: 24px;
+}
+
+.hint {
+  margin: 50px 0;
+  font-size: 16px;
+}
+
+span {
+  color: #faa2c1;
+  cursor: none;
+}

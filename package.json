@@ -1,0 +1,13 @@
+{
+  "name": "cursor-dot",
+  "version": "1.0.0",
+  "description": "Fancy cursor dot",
+  "main": "index.js",
+  "repository": "github.com/gaoryrt/cursor-dot",
+  "author": "gaoryrt",
+  "license": "MIT",
+  "files": [
+    "index.js"
+  ],
+  "private": false
+}
