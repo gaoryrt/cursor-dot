@@ -50,7 +50,11 @@ const cursorDot = ({
     dot.style.height = cur.d + 'px'
     dot.style.width = cur.d + 'px'
 
-    requestAnimationFrame(draw)
+    try {
+      requestAnimationFrame(draw)
+    } catch(_) {
+      setImmediate(draw)
+    }
   }
 
   dot.over = (any, style) => {

@@ -9,5 +9,12 @@
   "files": [
     "index.js"
   ],
-  "private": false
+  "scripts": {
+    "test": "ava"
+  },
+  "private": false,
+  "devDependencies": {
+    "ava": "^2.1.0",
+    "browser-env": "^3.2.6"
+  }
 }
