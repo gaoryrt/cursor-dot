@@ -10,11 +10,13 @@
     "index.js"
   ],
   "scripts": {
-    "test": "ava"
+    "report-coverage": "nyc report --reporter=text-lcov > coverage.lcov && codecov",
+    "test": "nyc ava"
   },
   "private": false,
   "devDependencies": {
     "ava": "^2.1.0",
-    "browser-env": "^3.2.6"
+    "browser-env": "^3.2.6",
+    "nyc": "^14.1.1"
   }
 }
