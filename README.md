@@ -2,6 +2,7 @@
 > Fancy cursor dot
 
 ![](https://travis-ci.org/gaoryrt/cursor-dot.svg?branch=master)
+[![codecov](https://codecov.io/gh/gaoryrt/cursor-dot/branch/master/graph/badge.svg)](https://codecov.io/gh/gaoryrt/cursor-dot)
 ![](https://img.badgesize.io/gaoryrt/cursor-dot/master/index.js)
 ![](https://img.badgesize.io/gaoryrt/cursor-dot/master/index.js?compression=gzip)
 
