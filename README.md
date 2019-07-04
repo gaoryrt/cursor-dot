@@ -1,5 +1,5 @@
 # cursor-dot
-> Fancy cursor dot
+> A vanilla JavaScript library which creates customizable, interactive cursor effects when hovering over certain elements.
 
 ![](https://travis-ci.org/gaoryrt/cursor-dot.svg?branch=master)
 [![codecov](https://codecov.io/gh/gaoryrt/cursor-dot/branch/master/graph/badge.svg)](https://codecov.io/gh/gaoryrt/cursor-dot)
