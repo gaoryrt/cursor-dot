@@ -25,6 +25,7 @@ import curDot from 'cursor-dot'
 const cursor = curDot()
 // or, set as you want
 // cursor({
+//   zIndex: 2,
 //   diameter: 80,
 //   borderWidth: 1,
 //   borderColor: 'transparent',
