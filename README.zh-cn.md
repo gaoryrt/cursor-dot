@@ -8,9 +8,27 @@
 
 ## 安装 🏗️
 
+### yarn 或者 npm
+
 ```bash
 $ yarn add cursor-dot
 ```
+或者
+```bash
+npm i cursor-dot
+```
+然后可以在 js 文件里面使用
+```js
+import curDot from 'cursor-dot'
+```
+来引入
+
+### 直接引入 `window.curDot.min.js` 文件
+下载 `window.curDot.min.js` 文件到你的工程中，在 html 文件里直接引用:
+```html
+<script src="path/to/your/window.curDot.min.js"></script>
+```
+然后就可以使用 `window.curDot`
 
 ## 使用 🍹
 
@@ -27,7 +45,7 @@ const cursor = curDot()
 //   borderWidth: 1,
 //   borderColor: 'transparent',
 //   easing: 4,
-//   background: '#fff'
+//   background: '#ddd'
 // })
 ```
 ---

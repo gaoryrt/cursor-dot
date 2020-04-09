@@ -9,7 +9,7 @@ const cursorDot = ({
   zIndex = 1,
   diameter = 80,
   borderWidth = 1,
-  borderColor = '#fff',
+  borderColor = '#ddd',
   easing = 4,
   background = 'transparent'
 } = {}) => {

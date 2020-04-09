@@ -10,16 +10,30 @@ English | [简体中文](./README.zh-cn.md)
 
 ## Installation 🏗️
 
+### yarn or npm
 ```bash
 $ yarn add cursor-dot
 ```
-
-## Usage 🍹
-
+or
+```bash
+npm i cursor-dot
+```
+then you can:
 ```js
 import curDot from 'cursor-dot'
 ```
----
+in your js files.
+
+### use `window.curDot.min.js` file
+Download `window.curDot.min.js` file into your project, and in your html file:
+```html
+<script src="path/to/your/window.curDot.min.js"></script>
+```
+then you can use `window.curDot`
+
+
+## Usage 🍹
+
 ![](./smoothcursorfollowing.gif)
 ```js
 const cursor = curDot()
@@ -30,7 +44,7 @@ const cursor = curDot()
 //   borderWidth: 1,
 //   borderColor: 'transparent',
 //   easing: 4,
-//   background: '#fff'
+//   background: '#ddd'
 // })
 ```
 ---
