@@ -10,7 +10,7 @@ English | [简体中文](./README.zh-cn.md)
 
 ## Installation 🏗️
 
-### yarn or npm
+### A: yarn or npm
 ```bash
 $ yarn add cursor-dot
 ```
@@ -24,8 +24,8 @@ import curDot from 'cursor-dot'
 ```
 in your js files.
 
-### use `window.curDot.min.js` file
-Download `window.curDot.min.js` file into your project, and in your html file:
+### B: use `window.curDot.min.js` file
+Download `dist/window.curDot.min.js` file into your project, and in your html file:
 ```html
 <script src="path/to/your/window.curDot.min.js"></script>
 ```
