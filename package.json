@@ -11,12 +11,14 @@
   ],
   "scripts": {
     "report-coverage": "nyc report --reporter=text-lcov > coverage.lcov && codecov",
-    "test": "nyc ava"
+    "test": "nyc ava",
+    "build": "parcel build dist/window.curDot.js -o window.curDot.min.js"
   },
   "private": false,
   "devDependencies": {
     "ava": "^2.1.0",
     "browser-env": "^3.2.6",
-    "nyc": "^14.1.1"
+    "nyc": "^14.1.1",
+    "parcel-bundler": "^1.12.4"
   }
 }
