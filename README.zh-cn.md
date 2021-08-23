@@ -59,7 +59,3 @@ cursor.over($('El'), {
 ```
 
 ## [在线 Demo](https://codesandbox.io/s/focused-ellis-g9mpm)
-
-# 捐助
-[![](https://cdn.buymeacoffee.com/buttons/default-white.png)](https://www.buymeacoffee.com/pT2Y5iN)
-![](https://jungle.fm/assets/donate.jpg)
