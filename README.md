@@ -62,7 +62,3 @@ cursor.over($('El'), {
 ```
 
 ## [Give it a try](https://codesandbox.io/s/focused-ellis-g9mpm)
-
-# Donate
-[![](https://cdn.buymeacoffee.com/buttons/default-white.png)](https://www.buymeacoffee.com/pT2Y5iN)
-![](https://jungle.fm/assets/donate.jpg)
