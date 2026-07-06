@@ -61,4 +61,16 @@ cursor.over($('El'), {
 })
 ```
 
+## Destroy & re-init 🔄
+
+```js
+let cursor = curDot({ easing: 4 })
+
+// destroy when done (removes listeners, stops animation, removes DOM)
+cursor.destroy()
+
+// re-init with new options
+cursor = curDot({ easing: 8, diameter: 100 })
+```
+
 ## [Give it a try](https://codesandbox.io/s/focused-ellis-g9mpm)

@@ -42,3 +42,33 @@ test('over style', t => {
   document.body.dispatchEvent(mouseout)
   t.pass()
 })
+
+test('destroy removes DOM', t => {
+  const cursor = curDot()
+  document.dispatchEvent(new MouseEvent('mousemove', {
+    bubbles: true,
+    clientX: 0,
+    clientY: 0
+  }))
+  t.is(cursor.parentNode, document.body)
+  cursor.destroy()
+  t.is(cursor.parentNode, null)
+})
+
+test('destroy then re-create', t => {
+  const old = curDot()
+  document.dispatchEvent(new MouseEvent('mousemove', {
+    bubbles: true,
+    clientX: 0,
+    clientY: 0
+  }))
+  old.destroy()
+  const cursor = curDot()
+  document.dispatchEvent(new MouseEvent('mousemove', {
+    bubbles: true,
+    clientX: 10,
+    clientY: 10
+  }))
+  t.is(cursor.parentNode, document.body)
+  t.not(cursor, old)
+})

@@ -58,4 +58,16 @@ cursor.over($('El'), {
 })
 ```
 
+## 销毁与重新初始化 🔄
+
+```js
+let cursor = curDot({ easing: 4 })
+
+// 销毁实例（移除监听、停止动画、移除 DOM）
+cursor.destroy()
+
+// 重新初始化，可传入新配置
+cursor = curDot({ easing: 8, diameter: 100 })
+```
+
 ## [在线 Demo](https://codesandbox.io/s/focused-ellis-g9mpm)

@@ -1,6 +1,6 @@
 {
   "name": "cursor-dot",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "description": "Fancy cursor dot",
   "main": "index.js",
   "repository": "github.com/gaoryrt/cursor-dot",

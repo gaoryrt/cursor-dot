@@ -14,26 +14,17 @@ const cursorDot = ({
   background = 'transparent'
 } = {}) => {
   let inited = false
+  let rafId = null
+  let destroyed = false
+  const bindings = []
   const alt = { x: 0, y: 0, o: 1, d: diameter }
   const cur = { x: 0, y: 0, o: 0, d: diameter }
   const dot = document.createElement('div')
   const tim = easing / 15
   dot.style = `position:fixed;top:0;left:0;border-radius:100%;pointer-events:none;opacity:0;z-index:${zIndex};height:${diameter}px;width:${diameter}px;background:${background};border:${borderWidth}px solid ${borderColor};mix-blend-mode:exclusion;transition:background ${tim}s,border ${tim}s;will-change:transform`
 
-  document.addEventListener('mousemove', e => {
-    alt.x = e.clientX
-    alt.y = e.clientY
-    dot.style.opacity = 1
-    if (!inited) {
-      document.body.append(dot)
-      cur.x = alt.x
-      cur.y = alt.y
-      inited = true
-      draw()
-    }
-  })
-
   const draw = () => {
+    if (destroyed) return
     const dX = alt.x - cur.x
     const dY = alt.y - cur.y
     cur.x += (dX / easing)
@@ -52,27 +43,58 @@ const cursorDot = ({
     dot.style.width = cur.d + 'px'
 
     try {
-      requestAnimationFrame(draw)
+      rafId = requestAnimationFrame(draw)
     } catch (_) {
       setImmediate(draw)
     }
   }
 
+  const onMouseMove = e => {
+    if (destroyed) return
+    alt.x = e.clientX
+    alt.y = e.clientY
+    dot.style.opacity = 1
+    if (!inited) {
+      document.body.append(dot)
+      cur.x = alt.x
+      cur.y = alt.y
+      inited = true
+      draw()
+    }
+  }
+
+  document.addEventListener('mousemove', onMouseMove)
+
   dot.over = (any, style) => {
     const fn = el => {
-      el.addEventListener('mouseover', _ => {
+      const onOver = _ => {
         if (style.background) dot.style.backgroundColor = style.background
         if (style.borderColor) dot.style.borderColor = style.borderColor
         if (style.scale) alt.d = diameter * style.scale
-      })
-      el.addEventListener('mouseout', _ => {
+      }
+      const onOut = _ => {
         if (style.background) dot.style.backgroundColor = background
         if (style.borderColor) dot.style.borderColor = borderColor
         if (style.scale) alt.d = diameter
-      })
+      }
+      el.addEventListener('mouseover', onOver)
+      el.addEventListener('mouseout', onOut)
+      bindings.push({ el, onOver, onOut })
     }
     if (isEl(any)) fn(any)
     else if (isStr(any)) $$(any).forEach(fn)
+  }
+
+  dot.destroy = () => {
+    if (destroyed) return
+    destroyed = true
+    if (rafId != null) cancelAnimationFrame(rafId)
+    document.removeEventListener('mousemove', onMouseMove)
+    bindings.forEach(({ el, onOver, onOut }) => {
+      el.removeEventListener('mouseover', onOver)
+      el.removeEventListener('mouseout', onOut)
+    })
+    dot.remove()
   }
 
   return dot
